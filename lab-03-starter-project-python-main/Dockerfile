@@ -1,9 +1,7 @@
-FROM python:3.10-alpine
+FROM python:3.10-slim-buster
 
 # Dependancies
 COPY requirements/backend.in .
-
-RUN apk add --no-cache lapack-dev g++ gcc musl-dev
 
 RUN pip install --no-cache-dir -r backend.in
 
